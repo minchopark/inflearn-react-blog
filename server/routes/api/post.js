@@ -1,4 +1,5 @@
 import express from 'express';
+import auth from '../../middleware/auth';
 
 // Model
 import Post from '../../models/post';
@@ -15,7 +16,7 @@ router.get('/', async(req, res)=> {
 })
 
 
-router.post('/', async(req, res, next) => {
+router.post('/', auth ,async(req, res, next) => {
 
     // error가 발생할 수 있기 때문에
     try{
