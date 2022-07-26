@@ -10,6 +10,7 @@ import morgan from "morgan";
 // Routes
 import postRoutes from './routes/api/post';
 import userRoutes from './routes/api/user';
+import authRoutes from './routes/api/auth';
 
 
 const app = express();
@@ -42,6 +43,7 @@ mongoose.connect(MONGO_URI, {
 app.get('/');
 app.use('/api/post', postRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/auth', authRoutes);
 
 
 // 모듈화 시켜서 다른파일에서 사용할수 있게된다.
