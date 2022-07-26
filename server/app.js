@@ -8,7 +8,8 @@ import morgan from "morgan";
 
 
 // Routes
-import postsRoutes from './routes/api/post'
+import postRoutes from './routes/api/post';
+import userRoutes from './routes/api/user';
 
 
 const app = express();
@@ -39,7 +40,8 @@ mongoose.connect(MONGO_URI, {
 // 처음에 신호 들어온것을 모두 받아들여라
 // Use routes
 app.get('/');
-app.use('/api/post', postsRoutes)
+app.use('/api/post', postRoutes);
+app.use('/api/user', userRoutes);
 
 
 // 모듈화 시켜서 다른파일에서 사용할수 있게된다.
