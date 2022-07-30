@@ -7,9 +7,9 @@ import createRootReducer from './redux/reducers/index';
 import rootSaga from './redux/sagas/index';
 
 
-export const history = createBrowserHistory()
+export const history = createBrowserHistory();
 
-const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware();
 
 
 // 웹의 모든상태를 담고있는 초기값
@@ -40,3 +40,6 @@ sagaMiddleware.run(rootSaga)
 // reducers 에서 상태값을 어떻게 관리할지를 정해준다. ex) 로그인을 요청했다, 성공했다, 실패했다
 // sagas 이러한 상태일때 어떠한 함수들이 작동을 해야하는지 결정해준다
 // reducers-sagas 한 세트로 같이 작동
+
+
+export default store;
